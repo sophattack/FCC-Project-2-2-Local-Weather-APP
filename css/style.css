@@ -1,0 +1,43 @@
+body{
+  background:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496984135407&di=ed4eeba50dd165fc8d409aa61385c841&imgtype=0&src=http%3A%2F%2Fimg1.3lian.com%2Fimg13%2Fc4%2F58%2Fd%2F41.jpg) no-repeat cover;
+  font-family:Arial;
+  color:#F2F2F2;
+}
+
+.title{
+  text-align:center;
+  margin:50px 0;
+  padding:20px;
+  border:3px solid #0174DF;
+  border-radius:20px;
+  display:inline-block;
+  background-color:#0174DF;
+  box-shadow:0px 0px 15px #0101DF;
+}
+
+ul{
+  display:inline-block;
+  text-decoration:none;
+  list-style:none;
+  padding:50px 30px;
+  width:440px;
+}
+
+.hr{
+  background:#F2F2F2;
+  width:370px;
+  height: 1px;
+  text-align:center;
+}
+
+.brief{
+  margin-bottom:20px;
+}
+
+.btn{
+  color:#F2F2F2;
+  background-color:#08088A;
+  border-radius:20px;
+  width:300px;
+  margin-bottom:30px;
+}
