@@ -113,7 +113,7 @@
         referenceMainWrapper.style.backgroundSize = "100% auto";
     }
 
-    function toggleUnits() {
+    function metricToImperial() {
         if (countryUnits === 'metric') {                          
             tempSymbol = 'F';
             windSymbol = 'miles/hour';
@@ -128,7 +128,9 @@
             pressure = pressure * 10;                                
             displayPressure.innerHTML = "Barometric Pressure: " + pressure + " " + pressureSymbol;
         }
-        else {
+    }
+  function imperialToMetric() {
+        if(countryUnits==="imperial") {
             tempSymbol = 'C';
             countryUnits = 'metric';
             windSymbol = 'km/hour';
@@ -171,9 +173,14 @@
         }
     }
 
-
-    document.getElementById("unit").onclick = function () {             
-        toggleUnits(); 
+    document.getElementById("ctemp").onclick = function () {             
+        imperialToMetric(); 
     };
+  
+  
+    document.getElementById("ftemp").onclick = function () {             
+        metricToImperial(); 
+    };
+  
     locationByIP();
 })();
