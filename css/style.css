@@ -1,43 +1,225 @@
-body{
-  background:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496984135407&di=ed4eeba50dd165fc8d409aa61385c841&imgtype=0&src=http%3A%2F%2Fimg1.3lian.com%2Fimg13%2Fc4%2F58%2Fd%2F41.jpg) no-repeat cover;
-  font-family:Arial;
-  color:#F2F2F2;
+html {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
 }
 
-.title{
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  display: flex;
+  background:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497594108&di=58e91978b837f3c2e07028cae6ab9ab3&imgtype=jpg&er=1&src=http%3A%2F%2Fpic.90sjimg.com%2Fback_pic%2Fqk%2Fback_origin_pic%2F00%2F03%2F37%2F6421979db68be3c51a689f2aed2d00b1.jpg) no-repeat fixed;
+  color:#fff;
+  text-shadow:0px 0px 3px #000;
+  
+}
+
+#main-wrapper {
+  margin: 2px auto;
+  width: 990px;
+  height: 742px; 
+}
+
+#location-wrapper {
+  width: 250px;
+  height: 100px;
+  margin: 60px 30px 0 270px;
+  opacity: 0.85;
+}
+
+#location-wrapper h1 {
+  margin: 6px 0 0 0;
+  font-size: 50px;
+}
+
+#location-wrapper h3 {
+  margin: 0;
+  font-size:16px;
+}
+
+#data-wrapper {
+    width: 250px;
+    height: 380px;
+    margin: 0 270px;
+    opacity: 0.85;
+    font-size: 1.1em;
+}
+
+#temperature {
+    font-size: 100px;
+    margin-left: 10px;
+}
+
+#degreeSymbol {
+    position: relative;
+    font-size: 20px;
+    top: -24px;
+}
+
+#icons {
+    height: 80px;
+    width: 80px;
+    position: relative;
+    top: -22px;
+}
+
+#conditions {
+    font-size: 25px;
+}
+
+#unit {
+  margin-top: 30px;
+  margin-left: 0;
+}
+
+@media all and (max-width: 990px) {
+
+    body {
+        font-size: 12px;
+    }
+
+    #main-wrapper {
+      width: 700px;
+      height: 525px;
+      margin:30px;
+    }
+
+    #location-wrapper {
+      width: 177px;
+      height: 71px;
+      margin: 30px 30px 0 0;
+    }
+
+    #location-wrapper h1 {
+      font-size: 14px;
+      margin-top: 0;
+    }
+
+    #location-wrapper h3 {
+      font-size: 12px;
+    }
+
+    #data-wrapper {
+      width: 177px;
+      height: 269px;
+      font-size: 11px;
+    }
+
+    #temperature {
+        font-size: 30px;
+    }
+
+    #degreeSymbol {
+        position: relative;
+        font-size: 1.6em;
+        top: -14px;
+    }
+
+    #icons {
+        height: 50px;
+        width: 50px;
+        position: relative;
+        top: -12px;
+    }
+
+    #font-size-wrapper {
+        font-size: 0.8em;
+    }
+
+    #unit {
+        margin-top: 10px;
+        margin-left: 8px;
+    }
+
+}
+
+@media all and (max-width: 700px) {
+
+    #main-wrapper {
+        min-width: 496px;
+        height: 372px;
+    }
+
+    #location-wrapper {
+        margin: 10px 20px 0 16px;
+    }
+
+    #data-wrapper {
+        margin: 0 20px 20px 16px;
+    }
+}
+
+.or:before{
   text-align:center;
-  margin:50px 0;
-  padding:20px;
-  border:3px solid #0174DF;
-  border-radius:20px;
-  display:inline-block;
-  background-color:#0174DF;
-  box-shadow:0px 0px 15px #0101DF;
+  content:"or";
 }
 
-ul{
-  display:inline-block;
+#ctemp,#ftemp{
+  border:0px;
+  font-size:20px;
+  background-color:#A4A4A4;
+  width:160px;
+  height:50px;
+  color:#000;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+
+#ctemp{
+  border-radius:0 10px 10px 0;
+}
+
+#ftemp{
+  border-radius: 10px 0 0 10px;
+}
+
+
+#unit{
+  border-radius:10px;
+  background-color:#2E2E2E;
+  position:relative;
+  left:-500px;
+  top:-30px;
+}
+
+#ctemp{
+  position:absolute;
+  left:165px;
+}
+
+.or{
+  z-index:30;
+  position:absolute;
+  left:150px;
+  top:12px;
+  padding:5px;
+  padding-top:0px;
+  width:25px;
+  height:25px;
+  border-radius:50%;
+  background:#fff;
+  color:#2E2E2E;
+}
+
+button:active{
+  background:red;
+  color:#fff;
   text-decoration:none;
-  list-style:none;
-  padding:50px 30px;
-  width:440px;
+  border:none;
 }
 
-.hr{
-  background:#F2F2F2;
-  width:370px;
-  height: 1px;
-  text-align:center;
+button:visited{
+  background:red;
+  color:#fff;
+  text-decoration:none;
+  border:none;
 }
 
-.brief{
-  margin-bottom:20px;
-}
-
-.btn{
-  color:#F2F2F2;
-  background-color:#08088A;
-  border-radius:20px;
-  width:300px;
-  margin-bottom:30px;
+#ftemp:hover, #ctemp:hover{
+  background-color:#6E6E6E;
 }
