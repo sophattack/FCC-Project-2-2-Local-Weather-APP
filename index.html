@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <title>Local Weather</title>
   <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
@@ -9,28 +9,15 @@
 </head>
 
 <body>
-  <div>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-  </div>
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6">
       <div id="location-wrapper">
           <h1 id="city"></h1>
           <h3 id="country"></h3>
-        </div></div>
-    <div class="col-md-4">
+      </div>
+    </div>
+    <div class="col-md-6">
       <div id="main-wrapper">
-        
         <div id="data-wrapper">
           <div>
             <span id="temperature"></span>
@@ -38,24 +25,23 @@
             <span id="icon"></span>
           </div>
           <div id="font-size-wrapper">
-          <div id="conditions"></div>
-          <br/>
-          <div id="winds"></div>
-          <div id="pressure"></div>
-          <div id="humidity"></div>
-          <div id="sunrise"></div>
-          <div id="sunset"></div>
-          </div> <!-- end font-size-wrapper -->
+            <div id="conditions"></div>
+            <br/>
+            <div id="winds"></div>
+            <div id="pressure"></div>
+            <div id="humidity"></div>
+            <div id="sunrise"></div>
+            <div id="sunset"></div>
+          </div>
           <div id="unit">
             <button type="button" id="ftemp"><b>Fahrenheit</b></button>
             <div class="or">
             </div>
             <button id="ctemp"><b>Celcius</b></button>
           </div>
-        </div> <!-- end data-wrapper -->
-      </div> <!-- end main-wrapper -->
+        </div>
+      </div>
     </div>
-    <div class="col-md-4"></div>
   </div>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
