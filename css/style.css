@@ -12,15 +12,13 @@ body {
   width: 100%;
   height: 100%;
   font-size: 14px;
-  display: flex;
   background:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497594108&di=58e91978b837f3c2e07028cae6ab9ab3&imgtype=jpg&er=1&src=http%3A%2F%2Fpic.90sjimg.com%2Fback_pic%2Fqk%2Fback_origin_pic%2F00%2F03%2F37%2F6421979db68be3c51a689f2aed2d00b1.jpg) no-repeat fixed;
   color:#fff;
-  text-shadow:0px 0px 3px #000;
-  
+  text-shadow:0px 0px 3px #000;  
 }
 
 #main-wrapper {
-  margin: 2px auto;
+  margin: 2px;
   width: 990px;
   height: 742px; 
 }
