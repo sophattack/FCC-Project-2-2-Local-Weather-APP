@@ -8,6 +8,10 @@ html {
     box-sizing: inherit;
 }
 
+.space{
+	margin:10% 0;
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -17,18 +21,13 @@ body {
   text-shadow:0px 0px 3px #000;  
 }
 
-#main-wrapper {
-  margin: 2px;
-  width: 990px;
-  height: 742px; 
-}
-
 #location-wrapper {
-  width: 250px;
-  height: 100px;
-  margin: 60px 30px 0 270px;
+  width: 100%;
+  height: 33%;
+  padding: 30px 30px 0 200px;
   opacity: 0.85;
 }
+
 
 #location-wrapper h1 {
   margin: 6px 0 0 0;
@@ -41,11 +40,11 @@ body {
 }
 
 #data-wrapper {
-    width: 250px;
-    height: 380px;
-    margin: 0 270px;
-    opacity: 0.85;
-    font-size: 1.1em;
+	width: 100%;
+	height: auto;
+	opacity: 0.85;
+	font-size: 16px;
+	padding:0 40px 10px 150px;
 }
 
 #temperature {
@@ -75,83 +74,6 @@ body {
   margin-left: 0;
 }
 
-@media all and (max-width: 990px) {
-
-    body {
-        font-size: 12px;
-    }
-
-    #main-wrapper {
-      width: 700px;
-      height: 525px;
-      margin:30px;
-    }
-
-    #location-wrapper {
-      width: 177px;
-      height: 71px;
-      margin: 30px 30px 0 0;
-    }
-
-    #location-wrapper h1 {
-      font-size: 14px;
-      margin-top: 0;
-    }
-
-    #location-wrapper h3 {
-      font-size: 12px;
-    }
-
-    #data-wrapper {
-      width: 177px;
-      height: 269px;
-      font-size: 11px;
-    }
-
-    #temperature {
-        font-size: 30px;
-    }
-
-    #degreeSymbol {
-        position: relative;
-        font-size: 1.6em;
-        top: -14px;
-    }
-
-    #icons {
-        height: 50px;
-        width: 50px;
-        position: relative;
-        top: -12px;
-    }
-
-    #font-size-wrapper {
-        font-size: 0.8em;
-    }
-
-    #unit {
-        margin-top: 10px;
-        margin-left: 8px;
-    }
-
-}
-
-@media all and (max-width: 700px) {
-
-    #main-wrapper {
-        min-width: 496px;
-        height: 372px;
-    }
-
-    #location-wrapper {
-        margin: 10px 20px 0 16px;
-    }
-
-    #data-wrapper {
-        margin: 0 20px 20px 16px;
-    }
-}
-
 .or:before{
   text-align:center;
   content:"or";
@@ -170,6 +92,10 @@ body {
 
 #ctemp{
   border-radius:0 10px 10px 0;
+  z-index:2;
+  position:relative;
+  left:165px;
+  top:-85px;
 }
 
 #ftemp{
@@ -178,23 +104,19 @@ body {
 
 
 #unit{
-  border-radius:10px;
-  background-color:#2E2E2E;
-  position:relative;
-  left:-500px;
-  top:-30px;
+	background:#2E2E2E;
+	width:200px;
+	height:50px;
+	border-radius:20px;
+	position:relative;
+	left:30%;
+	top:200px;
 }
 
-#ctemp{
-  position:absolute;
-  left:165px;
-}
+
 
 .or{
-  z-index:30;
-  position:absolute;
-  left:150px;
-  top:12px;
+  z-index:3000;
   padding:5px;
   padding-top:0px;
   width:25px;
@@ -202,16 +124,22 @@ body {
   border-radius:50%;
   background:#fff;
   color:#2E2E2E;
+  margin-top:10px;
+  margin-left:-5px;
+  font-size:16px;
+  position:relative;
+  left:155px;
+  top:-48px;
 }
 
-button:active{
+#ctemp:active, #ftemp:active{
   background:red;
   color:#fff;
   text-decoration:none;
   border:none;
 }
 
-button:visited{
+#ctemp:visited, #ftemp:visited{
   background:red;
   color:#fff;
   text-decoration:none;
@@ -220,4 +148,93 @@ button:visited{
 
 #ftemp:hover, #ctemp:hover{
   background-color:#6E6E6E;
+}
+
+
+@media screen and (max-width: 990px) {
+
+
+	.pos{
+		width:50%;
+		height:auto;
+		float:left;
+	}
+
+    #location-wrapper {
+		font-size:50px;
+		width:50%;
+		margin:0;
+		padding:30px 0 0 60px;
+    }
+
+
+    #data-wrapper {
+      font-size: 16px;
+	  width:50%;
+	  padding:0 0 0 30px;
+	  margin:30px 0 0 80px;
+    }
+
+    #temperature {
+        font-size: 50px;
+    }
+
+    #degreeSymbol {
+        position: relative;
+        font-size: 1.6em;
+        top: -14px;
+    }
+
+    #icons {
+        height: 50px;
+        width: 50px;
+		position:relative;
+		top:5px;
+    }
+
+    #font-size-wrapper {
+        font-size: 0.8em;
+    }
+
+    #unit {
+        margin-top: 10px;
+		margin-left:30px;
+		position:relative;
+		left:-30px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+	
+	.sml{
+		min-width:100%;
+		height:auto;
+		float:none;
+	}
+
+
+    #main-wrapper {
+        min-width: 100%;
+        height: auto;
+		float:none;
+    }
+
+    #location-wrapper {
+        margin: 10px 20px 0 16px;
+    }
+
+    #data-wrapper {
+		min-width:100%;
+        margin: 10px 10px 20px 16px;
+		padding-left:60px;
+		padding-right:0;
+		margin-right:30px;
+    }
+	
+	#unit{
+		position:relative;
+		top:430px;
+		margin-left:60px;
+	}
 }
